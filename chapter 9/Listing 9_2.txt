@@ -1,0 +1,4 @@
+#Listing 9_2: sending message
+ws.onopen = (event) => {
+  ws.send("some message");
+};

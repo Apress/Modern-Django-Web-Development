@@ -1,0 +1,18 @@
+#Listing 8_7 : GraphQL schema
+type Query {
+  books: [Book]
+  book(id: ID!): Book
+}
+type Mutation {
+  addBook(title: String!, author: String, price: Int): Book
+}
+
+type Subscription {
+  bookAdded: Book
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

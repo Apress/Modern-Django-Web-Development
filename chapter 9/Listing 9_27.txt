@@ -1,0 +1,10 @@
+#Listing 9_27: sending in group
+        let form = document.getElementById('form')
+        form.addEventListener('submit', (e)=> {
+            e.preventDefault()
+            let message = e.target.message.value 
+            chatSocket.send(JSON.stringify({
+                'message':user+":"+message
+            }))
+            form.reset()
+        })

@@ -1,0 +1,13 @@
+#Listing 9_26: chat log
+        chatSocket.onmessage = function(e){
+            let data = JSON.parse(e.data)
+            console.log('Data:', data)
+
+            if(data.type === 'chat'){
+                let messages = document.getElementById('messages')
+
+                messages.insertAdjacentHTML('beforeend', `<div>
+                                        <p>${data.message}</p>
+                                    </div>`)
+            }
+        }

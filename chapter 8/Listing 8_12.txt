@@ -1,0 +1,13 @@
+#Listing 8_12 : mutation with variables
+mutation NewMutaton(
+  $title:String!,$author:String!,  $price: Int!
+) {
+  addBook(title: $title, 
+    author: $author, 
+    price: $price) 
+  {
+    author
+    price
+    title
+  }
+}

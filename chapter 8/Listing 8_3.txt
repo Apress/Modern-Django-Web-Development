@@ -1,0 +1,10 @@
+#Listing 8_3 : Query result
+{
+  "data": {
+    "book": {
+      "title": "Numerical Python",
+	author: "Johansan",
+      "price": 4000
+    }
+  }
+}

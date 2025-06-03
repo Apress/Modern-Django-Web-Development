@@ -1,0 +1,43 @@
+#Listing 9_9: ws_client.html
+<body>
+    <h1>WebSocket Client</h1>
+    <input type="text" id="messageInput" placeholder="Type your message here">
+    <button id="sendMessage">Send Message</button>
+    <div id="messages"></div>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8765');
+
+        // Log when the connection is open
+        ws.onopen = () => {
+            console.log('Connected to WebSocket server');
+        };
+
+        // Log messages from the server
+        ws.onmessage = (event) => {
+            const messageDiv = document.getElementById('messages');
+            const newMessage = document.createElement('p');
+            newMessage.textContent = `${event.data}`;
+            messageDiv.appendChild(newMessage);
+        };
+
+
+        // Send a message when the button is clicked
+        document.getElementById('sendMessage').addEventListener('click', () => {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim(); // Get the input value
+
+            if (message) {
+                if (ws.readyState === WebSocket.OPEN) {
+                    console.log(`Sending: ${message}`);
+                    ws.send(message); // Send the message to the server
+                    messageInput.value = ''; // Clear the input field
+                } else {
+                    console.log('WebSocket is not open.');
+                }
+            } else {
+                console.log('Please enter a message before sending.');
+            }
+        });
+    </script>
+</body>

@@ -1,0 +1,7 @@
+#Listing 8_4 : Query with arguments
+  query {
+    book(id: "1") {
+      title
+      price
+    }
+  }

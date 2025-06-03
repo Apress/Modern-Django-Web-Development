@@ -1,0 +1,8 @@
+#Listing 8_6 : GraphQL subscription
+subscription {
+  newBookAdded {
+	title
+	author 
+	price
+  }
+}

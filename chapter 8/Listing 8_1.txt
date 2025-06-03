@@ -1,0 +1,7 @@
+#Listing 8_1 : GraphQL type
+type Book {
+  id: ID!
+  title: String!
+  author: String
+  price: Int
+}

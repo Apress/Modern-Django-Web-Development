@@ -1,0 +1,7 @@
+#Listing 8_2 : GraphQL query
+query {
+  book {
+    title
+    price
+  }
+}

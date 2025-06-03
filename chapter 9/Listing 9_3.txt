@@ -1,0 +1,4 @@
+#Listing 9_3: reveiving message
+ws.onmessage = (event) => {
+  console.log(event.data);
+};

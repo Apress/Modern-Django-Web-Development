@@ -1,0 +1,17 @@
+#Listing 9_18: index.html as WS client
+<html>
+<head>
+    <title>Index Page</title>
+
+        <h1>Let's chat</h1>
+        <script>
+            let url = 'ws://' + window.location.host + '/ws/chat/';
+            const chatSocket = new WebSocket(url);
+    
+            chatSocket.onmessage = function(e) {
+                const data = JSON.parse(e.data);
+                console.log("Data: ", data);
+            };
+        </script>
+    </body>
+</html>

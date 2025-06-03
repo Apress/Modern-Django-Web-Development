@@ -1,0 +1,8 @@
+#Listing 8_5 : GraphQL mutation
+mutation {
+  createBook(title: "Numerical Python", author="Johansan", price: 750) {
+	title
+	author
+	price
+  }
+}
