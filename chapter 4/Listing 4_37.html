@@ -1,0 +1,27 @@
+#Listing 4_37: list_books.html
+<h2 style = "text-align: center;">List of Books</h2>
+    <br>
+    <div style="overflow-x: auto;">
+        <p><a href="../newbook"><input type="button" value="Add New" /></a></p>
+        <table>
+          <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+            
+          </tr>
+            {% for book in books %}
+            <tr>
+                    <td> {{ book.title }}</td>
+                    <td> {{ book.author }}</td>
+                    <td> {{ book.price}}</td>
+                    <td> <a href="../show/{{ book.id }}"><input type="button" value="Detail" /></a></a></td>
+                    <td> <a href="../update/{{ book.id }}"><input type="button" value="Update" /></a></td>
+                    <td><a href="../delete/{{ book.author }}"><input type="button" value="Delete" /></a></td>                
+            </tr>
+            {% endfor %}
+        </table>
+    </div>

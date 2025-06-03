@@ -1,0 +1,17 @@
+#Listing 4_9: book.html
+<html>
+<body>
+    <h2 style = "text-align: center;">Title: {{ book.title }}</h2>
+    <br>           
+                    <p><b>ID:</b> {{ book.id }}</p>
+                    <p><b>Author:</b> {{ book.author }}</p>
+                    <p><b>Price:</b> {{ book.price}}</p>
+                    <p><b>Publisher:</b> {{ book.publisher }}</p>
+                    {% if book.ebook %}
+                    <p><b>Available as Ebook?: </b> Yes</p>
+                    {% else %}
+                    <p><b>Available as Ebook?: </b> No</p>
+                    {% endif %}
+                    <hr>            
+</body>        
+</html>

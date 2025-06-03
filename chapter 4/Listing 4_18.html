@@ -1,0 +1,8 @@
+#Listing 4_18: bookform.html – rendering form as a table 
+        <form action="/firstapp/addbook/" method="post">
+            {% csrf_token %}
+            <table>
+            {{ form.as_table }}
+            </table>
+            <input type="submit" value="OK">
+        </form>

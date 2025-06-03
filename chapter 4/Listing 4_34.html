@@ -1,0 +1,12 @@
+#Listing 4_34: book_confirm_delete.html
+<html>
+<body>
+ <form method="post">
+    {% csrf_token %}  
+    <h2> {{ object.title }} By {{ object.author }}</h2>  
+    <p>Are you sure you want to delete ?</p>  
+  
+    <input type="submit" value="Confirm"> <a href="../list/"><input type="button" value="Cancel" /></a>
+</form> 
+</body>
+</html>

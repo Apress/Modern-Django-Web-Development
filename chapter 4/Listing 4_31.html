@@ -1,0 +1,12 @@
+#Listing 4_31: ModelForm template for CreateView
+<html>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+            {{ form.as_table }}
+            </table>
+            <input type="submit" value="OK">
+        </form>
+    </body>
+</html>  

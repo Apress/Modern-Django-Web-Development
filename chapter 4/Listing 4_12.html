@@ -1,0 +1,13 @@
+#Listing 4_12: bookform.html
+        <form action="/firstapp/addbook/" method="post">            
+            {% csrf_token %}
+            <p><label for="ttl">Title: </label>
+            <input id="ttl" type="text" name="title"></p>
+            <p><label for="auth">Author's name: </label>
+            <input id="auth" type="text" name="author"></p>
+            <p><label for="price">Price: </label>
+            <input id="price" type="text" name="price"></p>
+            <p><label for="pub">Publisher: </label>
+            <input id="pub" type="text" name="publisher"></p>
+            <input type="submit" value="OK">
+        </form>

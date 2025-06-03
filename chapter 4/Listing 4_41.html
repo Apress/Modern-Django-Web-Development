@@ -1,0 +1,24 @@
+#Listing 4_41: books.html – display static image
+<html>
+<body>
+    <div>
+        <div style="float:left;width:45%;">
+            {% load static %}
+            
+            <img src="{% static '' %}{{book.coverimg}}">
+        </div> 
+        <div style="float:right;width:45%;" >         
+                    <p><b>ID:</b> {{ book.id }}</p>
+                    <p><b>Author:</b> {{ book.author }}</p>
+                    <p><b>Price:</b> {{ book.price}}</p>
+                    <p><b>Publisher:</b> {{ book.publisher }}</p>
+                    {% if book.ebook %}
+                    <p><b>Available as Ebook?: </b> Yes</p>
+                    {% else %}
+                    <p><b>Available as Ebook?: </b> No</p>
+                    {% endif %}
+                    <hr> 
+        </div>          
+    </div>  
+</body>        
+</html>

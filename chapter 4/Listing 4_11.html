@@ -1,0 +1,14 @@
+#Listing 4_11: list_books.html
+<html>
+<body>
+    <h2 style = "text-align: center;">List of Books</h2>
+    <br>
+            {% for book in books %}
+                    <p><b>Title:</b> {{ book.title }}</p>
+                    <p><b>Author:</b> {{ book.author }}</p>
+                    <p><b>Price:</b> {{ book.price}}</p>
+                    <p><b>Publisher:</b> {{ book.publisher }}</p>
+                    <hr>
+            {% endfor %}
+        
+</html>

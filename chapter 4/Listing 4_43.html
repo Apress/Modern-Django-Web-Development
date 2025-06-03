@@ -1,0 +1,23 @@
+#Listing 4_43: aboutbooks.html
+    {% for book in books %}   
+    <div id = "item-{{ book.id }}" class="collapsible" onclick="myfunction(this.id)">   
+        {{ book.title }}
+        
+    </div>
+    &nbsp; 
+   
+           <div style="display:none; font-size: 20px;">
+            <ul>
+                <li><b>ID:</b> {{ book.id }}</li>
+                <li><b>Author:</b> {{ book.author }}</li>
+                <li><b>Price:</b> {{ book.price}}</li> 
+                <li><b>Publisher:</b> {{ book.publisher }}</li>
+                    {% if book.ebook %}
+                <li><b>Available as Ebook?: </b> Yes</li> 
+                    {% else %}
+                <li><b>Available as Ebook?: </b> No</li>
+                    {% endif %}
+            </ul>
+           </div>        
+             
+     {% endfor %}

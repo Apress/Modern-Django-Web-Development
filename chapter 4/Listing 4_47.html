@@ -1,0 +1,13 @@
+#Listing 4_47: including templates
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        {% include 'top.html' %}
+        <h1 style="text-align: center;">This is Home page</h1>
+        {% include 'bottom.html' %}
+    </body>
+</html>

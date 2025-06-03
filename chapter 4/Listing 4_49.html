@@ -1,0 +1,19 @@
+#Listing 4_49: parent template (base.html)
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            {% block title %}
+            Title
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+        {% include 'top.html' %}
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        {% include 'bottom.html' %}
+    </body>
+</html>

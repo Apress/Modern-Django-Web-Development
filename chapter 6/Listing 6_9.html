@@ -1,0 +1,16 @@
+#Listing 6_9: index.html 
+        {% if messages %}
+	{% for message in messages %}
+	   <p>{{ message }}</p>
+       {% if message.level == 25 %}
+       <a href={% url "logout" %}>Click here to Log out</a>
+       {% else %}
+<a href={% url "login" %}>Click here to Log In</a>
+       {% endif %}
+	{% endfor %}
+    {% else %}
+    <a href={% url "login" %}>Click here to Log In</a>
+{% endif %}
+<br><br>
+<a href={% url "register" %}>Click here to Register</a>
+        <h2>Home page</h2>
